@@ -80,7 +80,7 @@ set smartcase
 set splitbelow
 
 " delete all buffers
-nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
+nmap <silent> <leader>da :exec "1," . bufnr('$') . "bd"<cr>
 
 " window navigation
 nmap <C-h> <C-w>h
