@@ -22,6 +22,6 @@ set vb t_vb= " fuck off bells
 if has("gui_win32")
   set guifont=Source_Code_Pro_Medium:h12:cDEFAULT
 else
-  set guifont=Source\ Code\ Pro\ Medium\ 12
+  set guifont=Source\ Code\ Pro\ Medium\ 14
 end
 
