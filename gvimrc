@@ -5,7 +5,6 @@
 " ln -s ~/.vim/gvimrc ~/.gvimrc
 
 
-set background=light
 colorscheme molokai
 
 set go-=T " no toolbar
