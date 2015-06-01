@@ -45,9 +45,20 @@ set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
 set showcmd
 set number
 set laststatus=2 " always show
-set statusline=%<%f\ %w%h%m%r\ [%{&ff}/%Y]\ %#warningmsg#%{SyntasticStatuslineFlag()}%*\ [%{getcwd()}]%=%-14.(%l,%c%V%)\ %p%%
 set linespace=2
 
+"set statusline=%<%f\ %w%h%m%r\ [%{&ff}/%Y]\ [%{getcwd()}]%=%-14.(%l,%c%V%)\ %p%%
+set statusline=
+set statusline +=%1*\ %n\ %* "buffer #
+set statusline +=%5*%{&ff}%* "file format
+set statusline +=%3*%y%* "file type
+set statusline +=%4*\ %<%F%* "full path
+set statusline +=%2*%m* "modified flag
+set statusline +=%#warningmsg#%{SyntasticStatuslineFlag()}%*
+set statusline +=%1*%=%5l%* "current line
+set statusline +=%2*/%L%* "total lines
+set statusline +=%1*%4v\ %* "virtual column number
+set statusline +=%2*0x%04B\ %* "char under cursor
 
 " tab rules
 set tabstop=2
@@ -127,7 +138,6 @@ vmap <C-Down> xp`[V`]
 
 " re-source .vimrc if we just modified it
 autocmd BufWritePost .vimrc source $MYVIMRC
-
 
 " other config
 let g:syntastic_always_populate_loc_list = 1
